@@ -4,19 +4,19 @@ module.exports = {
     es2021: true,
     node: true,
   },
-  extends: ['plugin:react/recommended', 'plugin:prettier/recommended'],
+  extends: ["plugin:react/recommended", "plugin:prettier/recommended"],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
     },
-    ecmaVersion: 'latest',
-    sourceType: 'module',
+    ecmaVersion: "latest",
+    sourceType: "module",
   },
-  plugins: ['react'],
+  plugins: ["react"],
   rules: {
-    'react/react-in-jsx-scope': 'off',
-    'prettier/prettier': [
-      'error',
+    "react/react-in-jsx-scope": "off",
+    "prettier/prettier": [
+      "error",
       {},
       {
         usePrettierrc: true,
@@ -25,7 +25,7 @@ module.exports = {
   },
   settings: {
     react: {
-      version: 'detect',
+      version: "detect",
     },
   },
 };
