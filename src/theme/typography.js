@@ -38,10 +38,10 @@ const typography = {
     fontSize: pxToRem(14),
   },
   button: {
-    fontSize: pxToRem(16),
+    fontSize: pxToRem(14),
   },
   caption: {
-    fontSize: pxToRem(14),
+    fontSize: pxToRem(16),
   },
   overline: {
     fontSize: pxToRem(14),
