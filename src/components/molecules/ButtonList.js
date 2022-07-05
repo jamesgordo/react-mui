@@ -1,5 +1,7 @@
 import PropTypes from "prop-types";
 import { Box, Typography, Divider } from "@mui/material";
+import SyntaxHighlighter from "react-syntax-highlighter";
+import { monokai } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
 ButtonList.propTypes = {
   title: PropTypes.string,
@@ -16,6 +18,12 @@ export default function ButtonList({ title, code, component }) {
     <Box sx={{ mb: 2 }}>
       <Typography variant="h5">{title}</Typography>
       <Divider sx={{ mt: 2, mb: 4 }} />
+
+      {code && (
+        <SyntaxHighlighter language="javascript" style={monokai}>
+          {code}
+        </SyntaxHighlighter>
+      )}
 
       {colors.map((color) => (
         <PassedComponent
