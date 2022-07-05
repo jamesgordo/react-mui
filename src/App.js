@@ -1,7 +1,7 @@
 import { Container, Typography, Button, Box } from "@mui/material";
 import ButtonList from "./components/molecules/ButtonList";
-import CustomButtonA from "./components/atoms/CustomButtonA";
-import CustomButtonB from "./components/atoms/CustomButtonB";
+import CustomButtonA from "./components/atoms/buttons/CustomButtonA";
+import CustomButtonB from "./components/atoms/buttons/CustomButtonB";
 import CustomHeadingA from "./components/atoms/headings/CustomHeadingA";
 import CustomHeadingB from "./components/atoms/headings/CustomHeadingB";
 import HeadingList from "./components/molecules/HeadingList";
@@ -22,9 +22,21 @@ function App() {
           Button Examples
         </Typography>
 
-        <ButtonList title="Default MUI Base Button" component={Button} />
-        <ButtonList title="Custom Button A" component={CustomButtonA} />
-        <ButtonList title="Custom Button B" component={CustomButtonB} />
+        <ButtonList
+          title="Default MUI Base Button"
+          component={Button}
+          code={`import Button from "@mui/material/Button"\n\n// How to use\n<Button color="primary" onClick="{() => alert('You clicked this button')}">Click Here</Button>`}
+        />
+        <ButtonList
+          title="Custom Button A"
+          component={CustomButtonA}
+          code={`import CustomButtonA from "./components/atoms/buttons/CustomButtonA"\n\n// How to use\n<CustomButtonA color="primary" onClick="{() => alert('You clicked this button')}">Click Here</CustomButtonA>`}
+        />
+        <ButtonList
+          title="Custom Button B"
+          component={CustomButtonB}
+          code={`import CustomButtonB from "./components/atoms/buttons/CustomButtonB"\n\n// How to use\n<CustomButtonB color="primary" onClick="{() => alert('You clicked this button')}">Click Here</CustomButtonB>`}
+        />
       </Box>
 
       <Box sx={{ mb: 16 }}>
@@ -32,9 +44,21 @@ function App() {
           Heading Examples
         </Typography>
 
-        <HeadingList title="Default MUI Typography Heading" component={Typography} />
-        <HeadingList title="Custom Typography Heading A" component={CustomHeadingA} />
-        <HeadingList title="Custom Typography Heading B" component={CustomHeadingB} />
+        <HeadingList
+          title="Default MUI Typography Heading"
+          component={Typography}
+          code={`import Typography from "@mui/material/Typography"\n\n// How to use\n<Typography color="primary">My Sample Title</Typography>`}
+        />
+        <HeadingList
+          title="Custom Typography Heading A"
+          component={CustomHeadingA}
+          code={`import CustomHeadingA from "./components/atoms/headings/CustomHeadingA"\n\n// How to use\n<CustomHeadingA color="primary">My Sample Title</CustomHeadingA>`}
+        />
+        <HeadingList
+          title="Custom Typography Heading B"
+          component={CustomHeadingB}
+          code={`import CustomHeadingB from "./components/atoms/headings/CustomHeadingB"\n\n// How to use\n<CustomHeadingB color="primary">My Sample Title</CustomHeadingB>`}
+        />
       </Box>
     </Container>
   );
